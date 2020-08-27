@@ -35,16 +35,20 @@
         
   ]
 
-  console.log(" name "+ " age "+" pos "+" pay ")
-  console.log("--------------------------------------")
-  for(i=0;i<empl.length;i++){
-  console.log(empl[i].firstName+" "+empl[i].age+" "+empl[i].position+" "+empl[i].pay);
+  
+  function payrol(empl){
+    for(i=0;i<empl.length;i++){
+  document.write(empl[i].firstName+" is  "  +empl[i].age+"   year old and earn "+  empl[i].position+" and getting "+ empl[i].pay+"<br>");
          
+  }
+
   }
     
    //document.getElementById("demo").innerHTML= 
   //  printPayroll(str=prompt(' enter employee name'));
 
+
+  payrol(empl)
   </script>
 
 </head>
