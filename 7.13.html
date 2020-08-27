@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>7.13</title>
+        </head>
+
+<body>
+
+    <p id="demo">that takes a string of decimal digits representing a number and
+         returns the string formed by inserting commas at every third position, starting on the right. Your implementation of the addCommas
+         function should be able to reproduce the following console log:</p>
+<script>
+
+function addCommas(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+
+document.write(addCommas(10000)) 
+document.write("<br>")
+document.write(addCommas(102000000)) 
+
+
+
+//document.getElementById("demo").innerHTML= 
+ // plural(res=prompt(' enter string'));
+    
+</script>
+
+
+</body>
+</html>
