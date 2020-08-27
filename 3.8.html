@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>3.8</title>
+</head>
+<body>
+
+        <p>  Displays the sum of digits till  sum is in single digits (example:  555(5+5+5=15=>1+5=6  ) )</p>
+
+<p id="demo"></p> 
+
+<script>
+
+function f(num) {
+    var sum=0;
+    sum=parseInt(sum);
+    num=parseInt(num)
+    while(num>0 || sum>9){ 
+        if(num== 0) 
+        { 
+            num= sum; 
+            sum = 0; 
+          //f( num= prompt("please write number again which should not be zero"))
+        } 
+        sum =sum+ parseInt(num % 10); 
+        num= parseInt(num/ 10); 
+        
+    } 
+    return sum;
+}
+    document.getElementById('demo').innerHTML= f(num=prompt("enter  any number with more than 2 digits"));
+
+</script>
+   
+</body>
+</html>

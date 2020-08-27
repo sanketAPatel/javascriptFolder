@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>7.2</title>
+        </head>
+
+<body>
+
+    <P>
+        As noted in the discussion of the built-in methods in the String class, <br>
+        the startsWith and endsWith methodsare not implemented in older browsers. <br>
+        Using the startsWith function on page 247 as a model, <br>
+        implement the function endsWith(str, suffix)<br>
+         that checks whether str ends with the specified suffix.<br>
+
+
+
+        <br><br>
+    </P>
+    <p id="demo"></p>
+    <script>
+
+
+
+
+function endsWith(str, endword){
+    var str = str.toLowerCase();
+        var endword = endword.toLowerCase();
+  var new1 = str.split('').reverse()
+  var newWord = endword.split('').reverse()
+  for ( i = 0; i < newWord.length ; i++) {
+    if (newWord[i] !== new1[i]) {
+      return false +  ":    no mtaches found at end";
+    }
+  }
+  return true+   ': means last word matches';
+}
+
+document.getElementById("demo").innerHTML=   endsWith(str=prompt(' first string1'),endword=prompt(' first string2'));
+
+
+
+</script>
+
+
+</body>
+</html>

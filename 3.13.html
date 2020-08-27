@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>3.13</title>
+</head>
+
+
+
+<body>
+
+    <p>  . Write a function printFactors(n) that lists all the factors in the form of a single line <br>
+      that includes the number n</p>
+    
+    
+    <p id="demo" ></p>
+    
+    <script>
+  function factors(n)
+{
+    n=parseInt(n);
+ var num_factors = []
+ var i;
+ 
+ for (i = 1; i <= Math.floor(Math.sqrt(n)); i += 1)
+ {
+  if (n % i === 0)
+  {
+   num_factors.push(i);
+   if (n / i !== i)
+    num_factors.push(n / i);
+  }
+}
+ 
+return  'factors'+'('+n+')'+'='+num_factors;
+}
+
+  
+  document.getElementById('demo').innerHTML=  factors(n=prompt("enter any positive ineteger number:"))
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>8.2</title>
+</head>
+
+
+
+<body>
+    <p>Implement a function createIndexArray(n) that returns an array of n integers,each of which is set to its index in the array.<br> 
+        For example, calling createIndexArray(10) should return the array</p>
+    <h3 id="demo" ></h3><br>
+    
+    <script>
+
+function createArray(n)
+ {
+      let array = [ ]; 
+      for (let i = 0; i < n; i++)
+       { 
+           array.push(i);
+            }
+             return array; 
+  }
+
+  document.getElementById("demo").innerHTML=  createArray(num=prompt('enter number  for elements in array '));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>3.14</title>
+</head>
+
+
+
+<body>
+
+    <p> The German mathematician Gottfried Wilhelm von Leibniz discovered the rather remarkable fact 
+        that the mathematical constant π can be computed using the following mathematical relationship:
+    
+        The formula to the right of the equal sign represents an infinite series; each fraction represents a term in that series. If you start with 1, subtract one-third, add one-fifth, and so on, for each of the odd integers, you get a number that gets closer and closer to the value of π/4 as you go along.
+        
+        pi/4 value identical value (3 . 1 4 1 5 9 2 6 5 3 5 8 9 7 9 3)/4=0.78542316089 </p>
+
+    
+    
+    <h2 id="demo" ></h2>
+    
+    <script>
+//document.write("Answer:"+ '<br>')
+
+function  frac(){
+ 
+  var  sum=1;
+    for(i=0;i<=(9999);i++){
+    var denom=2*(i)+3;
+    var deno=1/denom;
+    if(i%2==0){
+        sum=sum-deno;
+    }
+    else
+    {
+        sum=sum+deno;
+    }
+
+    }
+    
+    return sum;
+
+     
+}
+
+
+
+
+document.getElementById("demo").innerHTML=  frac( alert('press ok') );
+</script>
+
+</body>
+</html>

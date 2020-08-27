@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>5.11</title>
+</head>
+
+
+
+<body>
+    <p> Rewrite the digitSum function from page 93 so that it operates recursively instead of iteratively.<br>
+         To do so, you need to identify both the simple cases and the necessary recursive insight.  </p>
+    <script>
+function digitSum(n) 
+    {  
+	n=parseInt(n);
+        if (n == 0) 
+    return 0; 
+		else{
+        return (n%10 + digitSum(n/10));} 
+    } 
+  
+           var result = digitSum(nu=prompt('enter any integer numebr')); 
+       
+           document.write( "<srong>some of all digits is with recursion: <strong>"+result); 
+
+
+   
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+

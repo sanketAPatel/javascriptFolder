@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>3.16</title>
+</head>
+
+
+
+<body>
+    <p>
+        Greek mathematicians took a special interest in numbers that are equal to the sum of their proper divisors
+         (a proper divisor of n is any divisor less than n itself).
+         They called such numbers perfect numbers. For example, 6 is a perfect number because it is the sum of 1, 2, and 3, 
+         which are the integers less than 6 that divide evenly into 6.
+          Similarly, 28 is a perfect number because it is the sum of 1, 2, 4, 7, and 14.
+        Write a predicate function isPerfect(n) that returns true if the integer n is perfect, and false otherwise. 
+        Test your implementation by writing a program that uses the isPerfect function to check for perfect numbers in the range 1 to 9999 by testing each number in turn. Whenever your program identifies a perfect number, it should display that number on the screen. The first two lines of output should be 6 and 28. Your program should find two other perfect numbers in that range as well.
+
+    </p> 
+    
+    <h2 id="demo" >Perfect numbers in the range 1-9999 are :</h2>
+    
+    
+    
+    
+    <script>
+
+function isPerfect(){
+var num = 1, sum = 0;
+
+    while(num<=10000){
+
+        sum = 0;
+        for( i = 1; i < num; i++){
+
+            if(num % i == 0){
+                sum += i;
+            }
+        }
+
+        if(sum== num){
+          document.write(num +"<br>");
+        }
+        num=num+1;
+    }
+}
+    isPerfect( alert('press ok') );
+</script>
+
+</body>
+</html>

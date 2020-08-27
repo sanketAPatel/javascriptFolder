@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>8.6</title>
+</head>
+
+
+
+<body>
+    <p>Use the split, join, and sort methods to write a function sortLetters that rearranges the characters in a string<br>
+       so that they appear in lexicographic order. 
+    For example, calling sortLetters("cabbage") should return the string "aabbceg".<br><br></p>
+    
+<p id ="demo"></p>
+    <script>
+    
+     function  sortLetters(text) 
+    {
+    return text.split('').sort().join('');
+    }
+
+    document.getElementById('demo').innerHTML= sortLetters(text=prompt("enter any word only strings "));
+  //  reverseDigits(num=prompt("enter any positive ineteger number:"))
+    </script>
+    </body>
+</html>
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>7.3</title>
+</head>
+
+<body>
+
+    <p><br>
+        Implement the function isEnglishConsonant(ch), which returns true if ch is a consonant in English, <br><br>
+        that is, any alphabetic character except one of the five vowels: "a", "e", "i", "o", and "u". <br><br>
+        As with the isEnglishVowel function presented in the text,<br><br>
+         your method should recognize both lower- and uppercase consonants.<br><br>
+
+
+        <br><br>
+    </p>
+    <p id ="demo"></p>
+
+
+<script>
+
+    function isEnglishConsonant(ch){
+        ch = ch.toLowerCase();
+        if (ch == 'a' || ch == 'e' ||ch == 'i' || ch == 'o' || ch == 'u')
+         {
+          return false+ "   it is a vovel";
+
+        } else {
+            return true+ "   it is a constonants";
+
+         
+        }
+
+    }
+
+document.getElementById('demo').innerHTML= isEnglishConsonant(ch=prompt("enter any single character only"));
+    
+</script>
+</body>
+</html>
+

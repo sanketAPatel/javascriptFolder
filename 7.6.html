@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>7.6</title>
+        </head>
+
+<body>
+
+
+    <p id="demo"></p>
+    <script>
+
+function scrabbleScore(str){
+    var str;
+     str = str.toUpperCase();
+     str= str.replace(/[^\w\s]/g, '');
+    str=str.replace(/ /g, "");
+var sum=0;
+sum=parseInt(sum);
+var arr=[];
+           arr= str.split("");
+           
+           for(i=0;i<arr.length ;i++){
+            if(arr[i]==='A'||arr[i]==='E'||arr[i]== 'I'|| arr[i]=='L'||arr[i]== 'N'||arr[i]== 'O'||arr[i]== 'R'||arr[i]== 'S'||arr[i]== 'T'||arr[i]== 'U')
+               { sum=sum+1;
+            }
+               if(arr[i]=='D'||arr[i]== 'G'){
+                sum=sum+2;
+               }
+               if(arr[i]=='B'||arr[i]== 'C'||arr[i]=='M'||arr[i]== 'P'){
+                sum=sum+3;
+               }
+               if(arr[i]=='F'||arr[i]== 'H'||arr[i]=='V'||arr[i]== 'W'||arr[i]== 'Y'){
+                sum=sum+4;
+               }
+               if(arr[i]=='K'){
+                sum=sum+5;
+               }
+               if(arr[i]=='J'||arr[i]== 'X'){
+                sum=sum+8;
+               }
+               if(arr[i]=='Q'||arr[i]== 'Z'){
+                sum=sum+10;
+               }
+
+                return sum;
+           }
+
+
+}
+
+
+document.getElementById("demo").innerHTML=   scrabbleScore(str=prompt(' enter string'));
+
+
+
+    
+</script>
+
+
+</body>
+</html>

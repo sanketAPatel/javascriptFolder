@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>7.8</title>
+        </head>
+
+<body>
+<P>  For example, the sentence Madam, I’m Adam. is a sentence palindrome,<br>
+   because if you look only at the letters and ignore any case distinctions,<br>
+    it reads identically backward and forward. Write a predicate function isSentencePalindrome(str)<br>
+   that returns true if str fits this definition of a sentence palindrome  <strong>"REFRESH THE PAGE PLEASE " <br><br></P>
+<p id="demo"></p>
+
+<script>
+
+function isSentencePalindrome(str) {
+  
+  //var str = str.replace(/[^a-z0-9]/g, '').toLowerCase();
+  
+//[^a-z0-9 ]
+ var str= str.toLowerCase();
+ str= str.replace(/[^\w\s]/g, '');
+ str=str.replace(/ /g, "");
+// str=str.replace(/\S+/g);  
+
+ 
+   
+   var len = str.length;
+ 
+   if (len <= 1) 
+   return true;
+    else if (str[0] !== str[len - 1]) 
+   return false;
+ 
+   
+   return isSentencePalindrome(str.slice(1, -1));
+ }
+
+ document.getElementById("demo").innerHTML=   isSentencePalindrome(str=prompt(' enter string'));
+</script>
+
+
+</body>
+</html>
+
+

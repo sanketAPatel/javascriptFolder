@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>3.10</title>
+</head>
+<body>
+
+    <p>  drawConsoleBox(52, 6) should produce the following diagram:
+         </p>
+         <p id="demo" ></p>
+    <script>
+function f(num,num1)
+
+     {
+        document.write('+')
+        for(i=0;i<=num;i++){
+            document.write('-')
+        }
+        document.write('+')
+        document.write('<br>')
+//////////////////////////////////////////////////
+        
+        for(i=0;i<=num1;i++){
+            document.write('-'+Array(72).fill('\xa0').join('')+'-')
+          //  document.write('-'+)
+            document.write('<br>')
+        }
+        
+
+     ///////////////////////////////////////   
+       document.write('+')
+        for(i=0;i<=num;i++){
+            document.write('-')
+        }
+        document.write('+')
+    
+    }
+
+
+
+
+//document.getElementById("demo").innerHTML= 
+f(num=prompt("enter any positive ineteger number:"),num1=prompt("enter any positive ineteger number:"))
+    </script>
+   
+</body>
+</html>

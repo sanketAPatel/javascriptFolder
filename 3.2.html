@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>3.2</title>
+</head>
+<body>
+
+    <h1> max3 function bigest of three </h1>
+    <p>Biggest of three is =</p>
+    <p id="demo"></p><br>
+    <script>
+
+      function max3(a,b,c) { 
+        if(a>b && a>c)
+		{
+			return("a is biggest "+a);
+		}
+		else if(b>a && b>c)
+		{
+			return("b is biggest"+b);
+		}
+		else if(c>a && c>b)
+		{
+			return("c is biggest "+c);
+        }            	
+		
+    }
+    document.getElementById("demo").innerHTML= max3(a=prompt("enter the value of a:='"),b=prompt("enter the value of b :='"),c=prompt("enter the value of c :='")); 
+    </script>
+   
+</body>
+</html>

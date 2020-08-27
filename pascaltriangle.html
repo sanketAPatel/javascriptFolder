@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    
+    <title>5.7  PascalTriangle</title>
+    
+    
+</head>
+ 
+<body>
+
+
+    <script>
+        function PascalTriangle(){
+            document.getElementById("pas").innerHTML = "";
+            var rows = document.getElementById("numOfRows").value;
+            var arr = generatePascal(+rows);
+            for(var i=0;i<arr.length;i++){
+                var div = document.createElement('div');
+               
+                for(var j=0;j<arr[i].length;j++){
+                    var span = document.createElement('span');
+                    span.innerHTML=arr[i][j];
+                    
+                    div.appendChild(span);
+                }
+                document.getElementById("pas").appendChild(div);
+            }
+        }
+        function generatePascal(n){
+            var arry = [];
+            var tmp;
+            for(var i=0;i<n;i++){
+                arry[i]=[];
+                for(var j=0; j<=i; j++){
+                    if(j==i){
+                        arry[i].push(1);
+                    }else{
+                        tmp = (!!arry[i-1][j-1]?arry[i-1][j-1]:0)+(!!arry[i-1][j]?arry[i-1][j]:0);
+                        arry[i].push(tmp);
+                    }
+                }
+            }
+            return arry;
+        }
+    </script>
+
+    <div >
+        <input type="text"  id="numOfRows">
+        <input type="button" " value="Go " name="Go " onClick="PascalTriangle() ">
+        
+        <div id="pas"></div>
+    </div>
+</body>
+</html>

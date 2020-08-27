@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>7.12</title>
+        </head>
+
+<body>
+<p>Write a function removeDoubledLetters(str) that returns a new string<br>
+     in which any duplicated characters in str have been replaced by a single copy.
+    <br><br></p>
+
+    <p id="demo"></p>
+    <script>
+
+function removeDoubledLetters(str){
+
+var new1 = [...new Set([...str])].join('');
+
+   return new1;
+    }
+
+document.getElementById("demo").innerHTML=   removeDoubledLetters(str=prompt(' enter string'));
+
+    
+</script>
+
+
+</body>
+</html>

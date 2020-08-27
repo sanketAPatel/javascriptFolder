@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>5.6</title>
+</head>
+
+
+
+<body>
+    <p>P ( n ,   k ) = n ! ( n − k ) !    <br>Write a function permutations(n, k) that computes the P(n, k)<br>
+         function without calling the fact function. Part of your job in this problem is to <br>
+         figure out how to compute this value efficiently. To do so, you will probably find it useful to play <br>
+         around with some relatively <br>
+        small values to get a sense of how the factorials in the numerator and denominator of the formula behave. <br></p>
+
+    <h2 id="demo" > permutation of the given numbers are without factorial function </h2><br>
+    <h3 id="demo1" ></h3><br>
+    
+    
+    
+    
+    <script>
+function permutations(n,k)
+
+{
+    var num=1,num1=1;
+   
+for(i=1;i<=n;i++){
+
+    num =num*i;
+num=parseInt(num);
+}
+for(i=1;i<= (n-k);i++){
+    num1 =num1*i;
+    num1=parseInt(num1);
+
+}
+return (num/num1);
+
+
+}
+
+document.getElementById("demo1").innerHTML=   permutations(num=prompt('enter total possibility n'), k=prompt('enter outcome k'));
+</script>
+
+</body>
+</html>

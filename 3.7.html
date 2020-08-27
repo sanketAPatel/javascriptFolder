@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>3.7</title>
+</head>
+<body>
+
+    <p>  display reverse the numberr you entered
+         </p>
+         <p id="demo" ></p>
+    <script>
+function reverseDigits(num)
+{
+    
+    const rev = num.toString().split('').reverse().join('');  
+  return Math.sign(num) * parseInt(rev)
+        
+       
+}
+
+
+document.getElementById("demo").innerHTML= reverseDigits(num=prompt("enter any positive ineteger number:"))
+    </script>
+   
+</body>
+</html>

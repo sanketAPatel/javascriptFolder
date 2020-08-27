@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>5.5</title>
+        </head>
+<body>
+
+<p> This condition, however, can be simplified considerably by squaring each side of the inequality,
+     which yields the following more efficient test:<br><br>
+
+                            "x2+y2 < 1"
+    If you perform this simulation many times and compute what fraction of the darts falls inside the circle,<br>
+     the result will be an approximation of pi/4.<br>
+    
+    Write a program that simulates throwing 10,000 darts and then uses the results to display an <br>
+    approximate value of . Don’t worry if your answer is correct only in the first few digits. <br>The strategy used in this problem is not particularly accurate,<br> 
+    even though it occasionally proves useful as an approximation technique. In mathematics, this technique is called Monte Carlo integration, after the capital city of Monaco, famous for its casinos. </p><br><br><br><br>
+
+<button onclick="myFunction()"> x,y random # generator </button>
+
+<p id="demo0"></p><br>
+<p id="demo"></p><br>
+<p id="demo00"></p><br>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+
+<script>
+
+
+function myFunction() {
+for(i=0;i<10000;i++){
+  var x = (Math.random() - 0.5) * 2;
+  var y = (Math.random() - 0.5) * 2;
+  document.getElementById("demo0").innerHTML ="x  "+ x;
+  document.getElementById("demo").innerHTML ="x^2  is:  "+ x*x;
+  document.getElementById("demo00").innerHTML ="y is  "+ y;
+   document.getElementById("demo1").innerHTML = "y^2:"+y*y;
+
+ document.getElementById("demo2").innerHTML =      "x^2+y^2  is: "+x*x+y*y
+}
+}
+</script>
+
+</body>
+</html>

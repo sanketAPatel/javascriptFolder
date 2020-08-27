@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>2.7</title>
+</head>
+<body>
+
+        <p>  Displays 
+            according to pressed buttoin
+        </p>
+
+
+<input type="text"  id="demo"><br><br>
+<p id="demo1"> </p>
+
+<button type="button" onclick="negate()">negate</button>
+<button type="button1" onclick="intensify()">intensify</button>
+<button type="button2" onclick="reinforce()">reinforce</button>
+
+
+<script>
+  //  var str=prompt('etner th word')
+
+function negate() { 
+    var str=document.getElementById('demo').value
+    str=str.toString(str)
+    var opp="un"
+    var text = opp.concat("",str);;
+   // return text;
+    document.getElementById("demo1").innerHTML=text;
+    } 
+   
+
+ function intensify(str)
+ {
+    var str=document.getElementById('demo').value
+    str=str.toString(str)
+    var opp="plus"
+    var text = opp.concat("",str);;
+    //return text;
+    document.getElementById("demo1").innerHTML=text;
+ }
+
+ function reinforce(str){
+    var str=document.getElementById('demo').value
+    str=str.toString(str)
+    var opp="double"
+    var text = opp.concat("",str);;
+    //return text;
+    document.getElementById("demo1").innerHTML=text;
+ }
+    
+   // document.getElementById("button").innerHTML=negate(str=prompt("enter the word"));
+    
+    
+     
+   // document.getElementById("button1").innerHTML=  intensify(str=prompt("enter the word"));
+   // document.getElementById("button2").innerHTML=  reinforce(str=prompt("enter the word"));
+
+</script>
+   
+</body>
+</html>

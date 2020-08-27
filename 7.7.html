@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>7.7</title>
+        </head>
+
+<body>
+<P>Rewrite the isPalindrome function so that it operates recursively,<br>
+     taking advantage of the fact that a string is a palindrome if (a) its length is less than two or (b) its first and last<br>
+      characters match
+     and the substring between those characters is a palindrome.<br></P>
+<p id="demo"></p>
+
+<script>
+
+function isPalindrome(str) {
+  
+  //var str = str.replace(/[^a-z0-9]/g, '').toLowerCase();
+  
+//[^a-z0-9 ]
+ var str= str.toLowerCase();
+ str= str.replace(/[^\w\s]/g, '');
+ str=str.replace(/ /g, "");
+// str=str.replace(/\S+/g);  
+
+ 
+   
+   var len = str.length;
+ 
+   if (len <= 1) 
+   return true;
+    else if (str[0] !== str[len - 1]) 
+   return false;
+ 
+   
+   return isPalindrome(str.slice(1, -1));
+ }
+
+ document.getElementById("demo").innerHTML=   isPalindrome(str=prompt(' enter string'));
+</script>
+
+
+</body>
+</html>
+
+

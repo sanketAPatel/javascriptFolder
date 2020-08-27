@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>5.2</title>
+</head>
+
+
+
+<body>
+    <p></p>
+
+    <h2 id="demo" > average is :</h2><br>
+    <h3 id="demo1" ></h3><br>
+    
+    
+    
+    
+    <script>
+function randomAverage(n)
+
+{
+    var sum=0;
+for(i=0;i<n;i++){
+var randomNumber= Math.random();
+sum=sum+randomNumber;
+document.write(randomNumber+"<br>");
+}
+sum=sum/n;
+return sum;
+}
+
+document.getElementById("demo").innerHTML=   randomAverage(num=prompt('enter number to find similar number of random numbers ie2 5 10 100 1000  etc'));
+document.getElementById("demo1").innerHTML="following are the  "+ num+" random numbers";
+</script>
+
+</body>
+</html>

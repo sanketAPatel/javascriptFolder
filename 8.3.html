@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>8.3</title>
+</head>
+
+
+
+<body>
+    <p>    Both the reverseArray function defined in this chapter and the reverse method <br>
+        that is defined for all array objects change the values in the calling array. An alternative approach, <br>
+        which was adopted for the reverse function for strings in Chapter 7<br>
+        is to return a new arrayleaving the original unchanged. <br>
+        Use this strategy to implement a function createReversedArray(array) <br>
+        that returns an array whose elements are the reverse of the original values without changing the contents of array.<br>
+         Your function should allow you to generate the following console log:<br><br><br>
+         hogwarts = ['Gryfindorr', 'Hefflepuff', 'Ravenclaw', 'Slytherin'];
+    </p>
+
+    
+    <br><br>
+    
+    <p id="demo1"></p>
+
+    <script>
+
+
+var hogwarts = ['Gryfindorr', 'Hefflepuff', 'Ravenclaw', 'Slytherin'];
+
+function createReversedArray(hogwarts){
+var newarray = hogwarts.slice().reverse();
+
+return newarray;
+}
+
+
+//document.getElementById("demo1").innerHTML= function createReversedArray(hogwarts)
+    
+</script>
+<button onclick=" document.getElementById('demo1').innerHTML= 
+createReversedArray(hogwarts)">button press please</button>
+   
+</button> 
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>8.5</title>
+        </head>
+
+<body>
+<p>Write a comparison function sortAsTitles that takes two strings and compares them, <br>
+    subject to the following rules:
+    <br>
+    The comparison should ignore differences in case.<br>
+    
+    All punctuation marks except spaces should be ignored.<br>
+    
+    The words a,an, andthe at the beginning of a title should be ignored.<br>
+
+
+
+</p>
+
+
+<p id="demo"></p>
+<script>
+
+
+function sortAsTitles(String1,String2)
+{        var String1, String2;
+        var s1 = String1.toLowerCase();
+        var s2 = String2.toLowerCase();
+      //  var s2=String2.toLowerCase();
+       s1= s1.replace(/[^\w\s]/g, '');
+       s1 = s1.replace(/^The\s/i, " ");
+       s1 = s1.replace(/^A\s/i, " ");
+       s1 = s1.replace(/^An\s/i, " ");
+        //====================//
+        s2= s2.replace(/[^\w\s]/g, '');
+       s2 = s2.replace(/^The\s/i, " ");
+       s2 = s2.replace(/^A\s/i, " ");
+       s2 = s2.replace(/^An\s/i, " ");
+        //======================//
+
+        var n = s1.localeCompare(s2);
+
+    /*  s1=s1.split(" ");
+
+      for(var i = 0; i < s1.length; ++i){
+    if(s1[i].substr(0, 4).toLowerCase == "the "){
+       s1[i] = s1[i].substr(4, s1[i].length);
+        s1=s1.toString();
+    }
+        else {
+        s1.toString();}*/
+        return "compare of two string :"+n;
+        
+}
+      
+
+
+
+
+document.getElementById("demo").innerHTML=   sortAsTitles(string1=prompt(' first string1'),string2=prompt(' first string2'));
+
+
+
+
+</script>
+
+</body>
+</html>

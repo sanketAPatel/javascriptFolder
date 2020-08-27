@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>3.11</title>
+</head>
+<body>
+
+    <p>  arrowpattern
+         </p>
+         
+    <script>
+function drawConsoleArrow(num)
+{
+    
+  
+    for ( i = 1; i < num; i++) {
+            for (j = 1; j <= i; j++)
+            document.write('*')
+                        document.write('<br>');
+        }
+        for ( i = num; i >= 0; i--) {
+            for (j = 1; j <= i; j++)
+            document.write('*')
+            document.write('<br>');
+        }   
+       
+}
+
+
+drawConsoleArrow(num=prompt("enter any positive ineteger number:"))
+    </script>
+   
+</body>
+</html>
